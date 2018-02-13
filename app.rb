@@ -20,5 +20,4 @@ post('/output') do
     else
       erb(:failure)
     end
-
-end
+  end
