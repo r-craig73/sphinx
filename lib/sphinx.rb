@@ -1,23 +1,20 @@
 class Riddles
 
-  def initialize (riddle, answer)
-    @riddle
-    @answer
+  def initialize(riddle1)
+    @riddle1 = riddle1
+    # @riddle2 = riddle2
+    # @riddle3 = riddle3
   end
 
-# Q: What has one head, one foot and four legs? A: A Bed
-# Q: What is the center of gravity? A: The letter V!
-# Q: What state is surrounded by the most water? A: Hawaii
-
-  def success
-    #if answer == riddle key
-    #pass oh happy days
+  def reveal
+    if (@riddle1 == "a bed")
+      "oh happy days"
+    else
+      "failed, try again"
+    end
   end
-
-  def failure
-    #if answer =! riddle key
-    #failed, try again
-  end
-
 
 end
+
+# && (@riddle2 == "the letter v") && (@riddle1 == "hawaii")
+# , riddle2, riddle3
