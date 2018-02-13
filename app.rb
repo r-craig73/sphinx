@@ -11,7 +11,9 @@ end
 
 get('/result') do
   @riddle1 = params.fetch("riddle1")
-  output = Riddles.new(@riddle1)
+  @riddle2 = params.fetch("riddle2")
+  @riddle3 = params.fetch("riddle3")
+  output = Riddles.new(@riddle1, @riddle2, @riddle3)
   @result = output.reveal
   erb(:output)
 end

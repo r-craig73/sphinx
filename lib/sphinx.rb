@@ -1,14 +1,14 @@
 class Riddles
 
-  def initialize(riddle1)
+  def initialize(riddle1, riddle2, riddle3)
     @riddle1 = riddle1
-    # @result = result
-    # @riddle2 = riddle2
-    # @riddle3 = riddle3
+    @riddle2 = riddle2
+    @riddle3 = riddle3
   end
 
   def reveal()
-    if (@riddle1 == 'a bed')
+
+    if ((@riddle1.downcase() == 'a bed') && (@riddle2.downcase() == "the letter v") && (@riddle3.downcase() == "hawaii"))
       'oh happy days'
     else
       'failed, try again'
@@ -16,6 +16,3 @@ class Riddles
   end
 
 end
-
-# && (@riddle2 == "the letter v") && (@riddle1 == "hawaii")
-# , riddle2, riddle3
