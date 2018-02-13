@@ -12,6 +12,7 @@ describe('Riddle of the Sphinx', {:type => :feature}) do
     click_button('submit')
     expect(page).to have_content('oh happy days')
   end
+
   it('processes the user entry and returns correct anwers, regardless of capitalization') do
     visit('/')
     fill_in('riddle1', :with => 'A bed')
