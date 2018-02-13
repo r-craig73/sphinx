@@ -1,13 +1,11 @@
-require('capybara/rspec')
-require('./app')
-Capybara.app = Sinatra::Application
-set(:show_exceptions, false)
+require('rspec')
+require('pry')
+require('sphinx')
 
-describe('the riddle of the sphinx', {:type => :feature}) do
-  it('processes the user answer and returns whether the answer to the riddle is correct or not') do
-    visit('/')
-    fill_in('riddle1', :with => 'a bed')
-    click_button('submit')
-    expect(page).to have_content("oh happy days")
+describe('#reveal') do
+  it('returns the right answer after answering a joke') do
+    riddle = Riddles.new('What has one head, one foot and four legs?', 'a bed')
+    expect(riddle.reveal()).to(eq('a bed'))
   end
+
 end

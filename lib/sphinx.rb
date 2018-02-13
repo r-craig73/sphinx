@@ -1,17 +1,22 @@
 class Riddles
 
-  def initialize(riddle1)
+  def initialize(riddle1, result)
     @riddle1 = riddle1
+    @result = result
     # @riddle2 = riddle2
     # @riddle3 = riddle3
   end
 
-  def reveal
+  more_riddles = {'What is the center of gravity?' => 'a bed'}
+
+  def reveal()
     if (@riddle1 == "a bed")
-      "oh happy days"
+      @result = "oh happy days"
+
     else
-      "failed, try again"
+      @result = "failed, try again"
     end
+
   end
 
 end
