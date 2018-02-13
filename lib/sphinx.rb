@@ -11,7 +11,7 @@ class Riddles
     if (@riddle1 == 'a bed')
       'oh happy days'
     else
-      return 'failed, try again'
+      'failed, try again'
     end
   end
 

@@ -10,11 +10,8 @@ get('/') do
 end
 
 get('/result') do
-  # @length = params.fetch("length").to_i
-  # @width = params.fetch("width").to_i
-  # @height = params.fetch("height").to_i
-  # output = Parcel.new(@length, @width, @height)
-  @result = params.fetch("riddle1")
-  # @result2 = output.cost_to_ship
+  @riddle1 = params.fetch("riddle1")
+  output = Riddles.new(@riddle1)
+  @result = output.reveal
   erb(:output)
 end
